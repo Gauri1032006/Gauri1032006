@@ -1,0 +1,11 @@
+step 1:
+if TOP=N-1THEN
+PRINT "STACK IS FULL OR OVERFLOW"
+EXIT
+[END IF]
+step2:
+TOP=TOP+1
+step 3:
+STACK [TOP]=ITEM
+step 4:
+return
