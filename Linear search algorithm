@@ -1,0 +1,5 @@
+linear search(arr,item) 
+for each element in array 
+lf item==element
+return.its index
+return-1
