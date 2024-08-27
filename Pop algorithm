@@ -1,0 +1,11 @@
+step 1: 
+IF TOP=NULL THEN
+PRINT"STACK IS EMPTY OR UNDERFLOW "
+EXIT
+END IF
+step 2:
+ITEM=STACK[TOP]
+step 3:
+TOP=TOP-1
+step 4:
+return
