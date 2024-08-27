@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main()
+{
+int sum = a + b;
+printf("the addition of %d and %d is: %n", a, b, sum);
+}
+void(*addptr) (int, int);
+addptr = add;
+addptr(7, 8);
+return 0;
+}
