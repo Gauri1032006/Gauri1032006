@@ -1,0 +1,24 @@
+step 1:
+set BEG=LB,END=UB LOC=-1
+step 2:
+while(BEG+END) 
+MID=(BEG+END)/2
+if(ELE=A[MID)] then
+LOC=MID
+Gito step 3
+else
+if(ELE<A[MID]) 
+else
+BEG=MID-1;
+else
+BEG=MID+1;
+END IF
+END IF
+[END OF WHILE LOOP]
+step 3:
+lf (loc>=0) then  
+print element, "found in location", LOC
+else
+print element, " search is unsuccessful"
+step 4:
+exit
