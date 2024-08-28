@@ -1,0 +1,15 @@
+include <stdio.h>
+
+int main() {
+    int num = 10; // Declare an integer variable
+    int *ptr; // Declare a pointer variable
+
+    ptr = &num; // Assign the address of num to the pointer
+
+    printf("The value of num is: %d\n", num);
+    printf("The address of num is: %p\n", &num);
+    printf("The value of num using pointer is: %d\n", *ptr);
+    printf("The address stored in the pointer is: %p\n", ptr);
+
+    return 0;
+}
