@@ -1,0 +1,25 @@
+
+#include <stdio.h>
+
+void convertDays(int days) {
+    int years, months, remainingDays;
+
+    years = days / 365; // Calculate years
+    days = days % 365; // Remaining days after calculating years
+
+    months = days / 30; // Calculate months
+    remainingDays = days % 30; // Remaining days after calculating months
+
+    printf("%d days is equivalent to: %d years, %d months, and %d days\n", days, years, months, remainingDays);
+}
+
+int main() {
+    int totalDays;
+
+    printf("Enter the total number of days: ");
+    scanf("%d", &totalDays);
+
+    convertDays(totalDays);
+
+    return 0;
+}
