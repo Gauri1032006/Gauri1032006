@@ -1,0 +1,25 @@
+
+#include <stdio.h>
+
+int main() {
+    int number, firstDigit, lastDigit, temp;
+
+    printf("Enter a number to find its first and last digits: ");
+    scanf("%d", &number);
+
+    // Find the last digit
+    lastDigit = number % 10;
+
+    // Find the first digit using a loop
+    temp = number;
+    while (temp >= 10) {
+        temp = temp / 10;
+    }
+    firstDigit = temp;
+
+    printf("Number: %d\n", number);
+    printf("First digit: %d\n", firstDigit);
+    printf("Last digit: %d\n", lastDigit);
+
+    return 0;
+}
