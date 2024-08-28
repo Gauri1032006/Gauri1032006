@@ -1,0 +1,31 @@
+
+#include <stdio.h>
+#include <limits.h>
+
+void findLargestSmallestSecond(int arr[], int size) {
+    int largest = INT_MIN, smallest = INT_MAX, secondSmallest = INT_MAX;
+
+    for (int i = 0; i < size; i++) {
+        if (arr[i] > largest) {
+            secondSmallest = smallest;
+            smallest = largest;
+            largest = arr[i];
+        } else if (arr[i] > smallest && arr[i] < largest) {
+            secondSmallest = smallest;
+            smallest = arr[i];
+        } else if (arr[i] < smallest && arr[i] < secondSmallest) {
+            secondSmallest = arr[i];
+        }
+    }
+
+    printf("Largest: %d\nSmallest: %d\nSecond Smallest: %d\n", largest, smallest, secondSmallest);
+}
+
+int main() {
+    int arr[] = {12, 45, 2, 67, 89, 10, 36};
+    int size = sizeof(arr) / sizeof(arr[0]);
+
+    findLargestSmallestSecond(arr, size);
+
+    return 0;
+}
