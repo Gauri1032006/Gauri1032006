@@ -1,0 +1,27 @@
+
+#include <stdio.h>
+#define MAX_SIZE 5
+
+int queue[MAX_SIZE];
+int front = -1, rear = -1;
+
+void enqueue(int value) {
+    if (rear == MAX_SIZE - 1) {
+        printf("Queue is full. Cannot enqueue more elements.\n");
+    } else {
+        if (front == -1) {
+            front = 0;
+        }
+        rear++;
+        queue[rear] = value;
+        printf("%d enqueued to the queue.\n", value);
+    }
+}
+
+int main() {
+    enqueue(10);
+    enqueue(20);
+    enqueue(30);
+
+    return 0;
+}
