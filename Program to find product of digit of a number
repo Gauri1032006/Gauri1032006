@@ -1,0 +1,22 @@
+
+#include <stdio.h>
+
+int main() {
+    int number, digit, product = 1;
+
+    printf("Enter a number to find the product of its digits: ");
+    scanf("%d", &number);
+
+    int originalNumber = number; // Store the original number
+
+    while (number != 0) {
+        digit = number % 10; // Extract the last digit
+        product *= digit;    // Multiply the digit with the product
+        number = number / 10; // Remove the last digit
+    }
+
+    printf("Number: %d\n", originalNumber);
+    printf("Product of its digits: %d\n", product);
+
+    return 0;
+}
