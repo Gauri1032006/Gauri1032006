@@ -1,0 +1,12 @@
+#include <stdio.h>
+int main() 
+{
+int I=1;
+while(I<=5) 
+{
+printf(" %d/n", I);
+++i;
+}
+return 0;
+}
+
