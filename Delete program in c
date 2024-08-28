@@ -1,0 +1,32 @@
+
+#include <stdio.h>
+
+#define MAX_SIZE 10
+
+int main() {
+    int arr[MAX_SIZE] = {1, 2, 3, 4, 5};
+    int size = 5;
+    int pos, i;
+
+    printf("Enter the position of the element to delete: ");
+    scanf("%d", &pos);
+
+    if (pos < 0 || pos >= size) {
+        printf("Invalid position! Please enter a valid position.\n");
+    } else {
+        for (i = pos; i < size - 1; i++) {
+            arr[i] = arr[i + 1];
+        }
+        size--;
+
+        printf("Element at position %d deleted successfully.\n", pos);
+
+        printf("Updated array: ");
+        for (i = 0; i < size; i++) {
+            printf("%d ", arr[i]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
