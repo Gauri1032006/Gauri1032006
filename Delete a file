@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    char filename[] = "file_to_delete.txt";
+
+    // Attempt to delete the file
+    if (remove(filename) == 0) {
+        printf("File '%s' deleted successfully.\n", filename);
+    } else {
+        printf("Unable to delete the file '%s'.\n", filename);
+    }
+
+    return 0;
+}
