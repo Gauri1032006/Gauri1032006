@@ -1,0 +1,28 @@
+
+#include <stdio.h>
+
+int main() {
+    FILE *filePointer;
+    char data[50];
+
+    // Open file in write mode
+    filePointer = fopen("sample.txt", "w");
+
+    if (filePointer == NULL) {
+        printf("File could not be opened.");
+        return 1;
+    }
+
+    printf("Enter data to write to the file: ");
+    fgets(data, sizeof(data), stdin);
+
+    // Write data to the file
+    fprintf(filePointer, "%s", data);
+
+    // Close the file
+    fclose(filePointer);
+
+    printf("Data written to the file successfully.\n");
+    
+    return 0;
+}
