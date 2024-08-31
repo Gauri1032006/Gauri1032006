@@ -1,0 +1,19 @@
+
+#include <stdio.h>
+
+int main() {
+    char filename[] = "file_to_search.txt";
+    FILE *file;
+
+    // Attempt to open the file for reading
+    file = fopen(filename, "r");
+
+    if (file != NULL) {
+        printf("File '%s' found.\n", filename);
+        fclose(file);
+    } else {
+        printf("File '%s' not found.\n", filename);
+    }
+
+    return 0;
+}
