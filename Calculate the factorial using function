@@ -1,0 +1,20 @@
+
+#include <stdio.h>
+
+int calculateFactorial(int num) {
+    if (num == 0) {
+        return 1;
+    } else {
+        return num * calculateFactorial(num - 1);
+    }
+}
+
+int main() {
+    int number = 5; // You can change this number to calculate the factorial of a different number
+    int result = calculateFactorial(number);
+    
+    printf("The factorial of %d is: %d\n", number, result);
+    
+    return 0;
+}
+
