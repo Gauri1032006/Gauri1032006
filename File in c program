@@ -1,0 +1,14 @@
+
+#include <stdio.h>
+
+int main() {
+    FILE *filePointer;
+    char data[100];
+
+    // Opening a file in write mode
+    filePointer = fopen("example.txt", "w");
+
+    if (filePointer == NULL) {
+        printf("Unable to open file.\n");
+        return 1;
+    }
